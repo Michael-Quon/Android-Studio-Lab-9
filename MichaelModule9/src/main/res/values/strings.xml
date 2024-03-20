@@ -1,24 +1,22 @@
 <!-- Michael Quon N01565129 -->
 <resources>
-    <string name="app_name">MichaelLab9</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="description">The app\'s splash screen that shows for 3 seconds.</string>
-    <string name="name_id_copyright">By: Michael Quon N01565129 ©</string>
-    <string name="name">Michael Quon</string>
-    <string name="n01565129_humber_ca">n01565129@humber.ca</string>
-    <string name="michael">Michael</string>
-    <string name="quon">Quon</string>
-    <string name="open_nav">Open Navigation Drawer</string>
-    <string name="close_nav">Close Navigation Drawer</string>
-    <string name="prefs_name">user</string>
-    <string name="quo">Quo</string>
-    <string name="mic">Mic</string>
+    <string name="app_name" translatable="false">MichaelLab9</string>
+    <string name="description" translatable="false">The app\'s splash screen that shows for 3 seconds.</string>
+    <string name="name_id_copyright" translatable="false">By: Michael Quon N01565129 ©</string>
+    <string name="name" translatable="false">Michael Quon</string>
+    <string name="n01565129_humber_ca" translatable="false">n01565129@humber.ca</string>
+    <string name="michael" translatable="false">Michael</string>
+    <string name="quon" translatable="false">Quon</string>
+    <string name="open_nav" translatable="false">Open Navigation Drawer</string>
+    <string name="close_nav" translatable="false">Close Navigation Drawer</string>
+    <string name="prefs_name" translatable="false">user</string>
+    <string name="quo" translatable="false">Quo</string>
+    <string name="mic" translatable="false">Mic</string>
     <string name="options">Options</string>
-    <string name="key_mode">key mode</string>
+    <string name="key_mode" translatable="false">key mode</string>
     <string name="search">Search</string>
     <string name="search_up">SEARCH</string>
-    <string name="please_enter_a_search_phrase">Please Enter a Search Phrase.</string>
+    <string name="please_enter_a_search_phrase">Please enter a phrase to search.</string>
     <string name="no_app_can_handle_this_request">No app can handle this request</string>
     <string name="add">Add</string>
     <string name="save">Save</string>
@@ -26,28 +24,28 @@
     <string name="enter_course_description">Enter Course Description</string>
     <string name="delete">Delete</string>
     <string name="course_name">Course Name</string>
-    <string name="course_description">COurse Description</string>
-    <string name="please_fill_in_both_fields">Please fill in both fields</string>
-    <string name="deleted_all_courses">Deleted all courses</string>
-    <string name="blank" />
-    <string name="shared_preferences">shared preferences</string>
-    <string name="courses">courses</string>
-    <string name="saved_data_to_sharedpreferences">Saved data to SharedPreferences</string>
-    <string name="read_from_file_successful">Read From File Successful for: %s</string>
-    <string name="read_from_file_failed">Read from file failed for: %s</string>
-    <string name="file_deleted">File %s has been deleted</string>
-    <string name="file_not_existent">File %s does not exist</string>
-    <string name="file_name">File Name</string>
-    <string name="persistent_file">Persistent File</string>
-    <string name="cache_file">Cache File</string>
-    <string name="create_file">Create File</string>
-    <string name="delete_file">Delete File</string>
-    <string name="file_contents">File Contents</string>
-    <string name="write_file">Write File</string>
-    <string name="read_file">Read File</string>
-    <string name="file_creation_failed">Failed to create file %s</string>
-    <string name="file_has_been_created">File %s has been created</string>
-    <string name="file_already_exists">File %s already exists</string>
-    <string name="write_to_successful">Successfully wrote to file %s</string>
-    <string name="write_to_file_failed">Failed to write to file %s</string>
+    <string name="course_description">Course Description</string>
+    <string name="please_fill_in_both_fields" translatable="false">Please fill in both fields</string>
+    <string name="deleted_all_courses" translatable="false">Deleted all courses</string>
+    <string name="blank" translatable="false" />
+    <string name="shared_preferences" translatable="false">shared preferences</string>
+    <string name="courses" translatable="false">courses</string>
+    <string name="saved_data_to_sharedpreferences" translatable="false">Saved data to SharedPreferences</string>
+    <string name="read_from_file_successful" translatable="false">Read From File Successful for: %s</string>
+    <string name="read_from_file_failed" translatable="false">Read from file failed for: %s</string>
+    <string name="file_deleted" translatable="false">File %s has been deleted</string>
+    <string name="file_not_existent" translatable="false">File %s does not exist</string>
+    <string name="file_name" translatable="false">File Name</string>
+    <string name="persistent_file" translatable="false">Persistent File</string>
+    <string name="cache_file" translatable="false">Cache File</string>
+    <string name="create_file" translatable="false">Create File</string>
+    <string name="delete_file" translatable="false">Delete File</string>
+    <string name="file_contents" translatable="false">File Contents</string>
+    <string name="write_file" translatable="false">Write File</string>
+    <string name="read_file" translatable="false">Read File</string>
+    <string name="file_creation_failed" translatable="false">Failed to create file %s</string>
+    <string name="file_has_been_created" translatable="false">File %s has been created</string>
+    <string name="file_already_exists" translatable="false">File %s already exists</string>
+    <string name="write_to_successful" translatable="false">Successfully wrote to file %s</string>
+    <string name="write_to_file_failed" translatable="false">Failed to write to file %s</string>
 </resources>
