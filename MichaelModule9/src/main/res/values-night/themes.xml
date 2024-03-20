@@ -1,7 +1,17 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.MichaelLab9" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+<resources>
+    <style name="Theme.MichaelLab9" parent="Theme.AppCompat">
+        <!-- Customize your dark mode theme here -->
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+
+    <style name="MyOverflowMenuStyle" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">#484848</item> <!-- Set background color to white -->
+        <item name="android:textColor">#FF0000</item> <!-- Set text color to red -->
+        <item name="android:textStyle">bold</item>
+        <item name="android:itemBackground">#484848</item> <!-- Set item background color to white -->
+    </style>
+
 </resources>

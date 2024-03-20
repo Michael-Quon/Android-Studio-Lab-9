@@ -17,6 +17,7 @@
     <style name="MyOverflowMenuStyle" parent="Widget.AppCompat.PopupMenu">
         <item name="android:popupBackground">@color/white</item> <!-- Set background color to white -->
         <item name="android:textColor">#FF0000</item> <!-- Set text color to red -->
+        <item name="android:textStyle">bold</item>
         <item name="android:itemBackground">@color/white</item> <!-- Set item background color to white -->
     </style>
 

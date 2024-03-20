@@ -10,10 +10,10 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-
 import com.google.android.material.navigation.NavigationView;
 
 public class QuonActivity9 extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -38,13 +38,10 @@ public class QuonActivity9 extends AppCompatActivity implements NavigationView.O
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Michael1Fragment()).commit();
-            navigationView.setCheckedItem(R.id.Mic_nav_home);
+            navigationView.setCheckedItem(R.id.Mic_nav_toggle);
         }
 
-        SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.prefs_name), MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.clear(); // Clear all data
-        editor.apply();
+        applyTheme();
     }
 
     @Override
@@ -56,9 +53,9 @@ public class QuonActivity9 extends AppCompatActivity implements NavigationView.O
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int itemId = item.getItemId();
-        if (itemId == R.id.Mic_nav_home) {
+        if (itemId == R.id.Mic_nav_toggle) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Michael1Fragment()).commit();
-        } else if (itemId == R.id.Mic_nav_settings) {
+        } else if (itemId == R.id.Mic_nav_search) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Quon2Fragment()).commit();
         }
 
@@ -78,6 +75,50 @@ public class QuonActivity9 extends AppCompatActivity implements NavigationView.O
         }
         return super.onKeyUp(keyCode, event);
     }
+
+    private void applyTheme() {
+        SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.prefs_name), MODE_PRIVATE);
+        int savedMode = sharedPreferences.getInt(getString(R.string.key_mode), AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+
+        int systemNightMode = AppCompatDelegate.getDefaultNightMode();
+
+        if (savedMode == AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM) {
+            // If the saved mode is set to follow system, use the system's night mode setting
+            AppCompatDelegate.setDefaultNightMode(systemNightMode);
+        } else {
+            // Otherwise, use the saved mode
+            AppCompatDelegate.setDefaultNightMode(savedMode);
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.Mic_togglemenu) {
+            toggleMode();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void toggleMode() {
+        // retrieve what current mode is light/dark
+        int currentMode = AppCompatDelegate.getDefaultNightMode();
+
+        // switch/toggle mode
+        int newMode = (currentMode == AppCompatDelegate.MODE_NIGHT_YES) ? AppCompatDelegate.MODE_NIGHT_NO : AppCompatDelegate.MODE_NIGHT_YES;
+
+        // save updated mode into sharedpref
+        SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.prefs_name), MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(getString(R.string.key_mode), newMode);
+        editor.apply();
+
+        AppCompatDelegate.setDefaultNightMode(newMode);
+    }
+
+
 
 
 }
