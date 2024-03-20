@@ -55,8 +55,8 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
             super(itemView);
 
             // initializing our views with their ids.
-            courseNameTV = itemView.findViewById(R.id.idTVCourseName);
-            courseDescTV = itemView.findViewById(R.id.idTVCourseDescription);
+            courseNameTV = itemView.findViewById(R.id.Mic_idTVCourseName);
+            courseDescTV = itemView.findViewById(R.id.Mic_idTVCourseDescription);
         }
     }
 }

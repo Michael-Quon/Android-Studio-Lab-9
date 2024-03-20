@@ -40,11 +40,11 @@ public class Mi1chaelFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_michael1, container, false);
 
         // Initializing UI components
-        courseNameEdt = view.findViewById(R.id.idEdtCourseName);
-        courseDescEdt = view.findViewById(R.id.idEdtCourseDescription);
-        addBtn = view.findViewById(R.id.idBtnAdd);
-        deleteBtn = view.findViewById(R.id.delete_button);
-        courseRV = view.findViewById(R.id.idRVCourses);
+        courseNameEdt = view.findViewById(R.id.Mic_idEdtCourseName);
+        courseDescEdt = view.findViewById(R.id.Mic_idEdtCourseDescription);
+        addBtn = view.findViewById(R.id.Mic_idBtnAdd);
+        deleteBtn = view.findViewById(R.id.Mic_delete_button);
+        courseRV = view.findViewById(R.id.Mic_idRVCourses);
 
         // Load data from SharedPreferences
         loadDataFromSharedPreferences();

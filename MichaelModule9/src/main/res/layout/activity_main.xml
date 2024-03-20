@@ -27,13 +27,13 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/fragment_container"/>
+            android:id="@+id/Mic_fragment_container"/>
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/nav_view"
+        android:id="@+id/Mic_nav_view"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_menu"

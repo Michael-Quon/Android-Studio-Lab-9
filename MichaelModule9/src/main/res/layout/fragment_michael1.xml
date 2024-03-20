@@ -8,7 +8,7 @@
     tools:context=".Mi1chaelFragment">
 
     <EditText
-        android:id="@+id/idEdtCourseName"
+        android:id="@+id/Mic_idEdtCourseName"
         android:layout_width="251dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/idEdtCourseDescription"
+        android:id="@+id/Mic_idEdtCourseDescription"
         android:layout_width="249dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/idBtnAdd"
+        android:id="@+id/Mic_idBtnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="284dp"
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/idBtnSave"
+        android:id="@+id/Mic_idBtnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="286dp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/delete_button"
+        android:id="@+id/Mic_delete_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -63,7 +63,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/idRVCourses"
+        android:id="@+id/Mic_idRVCourses"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="208dp"

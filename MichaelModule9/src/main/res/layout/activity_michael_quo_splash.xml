@@ -8,7 +8,7 @@
     tools:context=".MichaelQuoSplash">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/Mic_Splash_imageView"
         android:layout_width="306dp"
         android:layout_height="298dp"
         app:layout_constraintBottom_toBottomOf="parent"
