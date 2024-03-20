@@ -33,4 +33,21 @@
     <string name="shared_preferences">shared preferences</string>
     <string name="courses">courses</string>
     <string name="saved_data_to_sharedpreferences">Saved data to SharedPreferences</string>
+    <string name="read_from_file_successful">Read From File Successful for: %s</string>
+    <string name="read_from_file_failed">Read from file failed for: %s</string>
+    <string name="file_deleted">File %s has been deleted</string>
+    <string name="file_not_existent">File %s does not exist</string>
+    <string name="file_name">File Name</string>
+    <string name="persistent_file">Persistent File</string>
+    <string name="cache_file">Cache File</string>
+    <string name="create_file">Create File</string>
+    <string name="delete_file">Delete File</string>
+    <string name="file_contents">File Contents</string>
+    <string name="write_file">Write File</string>
+    <string name="read_file">Read File</string>
+    <string name="file_creation_failed">Failed to create file %s</string>
+    <string name="file_has_been_created">File %s has been created</string>
+    <string name="file_already_exists">File %s already exists</string>
+    <string name="write_to_successful">Successfully wrote to file %s</string>
+    <string name="write_to_file_failed">Failed to write to file %s</string>
 </resources>
