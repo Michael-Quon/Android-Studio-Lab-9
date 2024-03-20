@@ -1,14 +1,24 @@
 // Michael Quon N01565129
 package michael.quon.n01565129.mq;
 
+import android.app.SearchManager;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
@@ -19,6 +29,7 @@ import com.google.android.material.navigation.NavigationView;
 public class QuonActivity9 extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
+    private AlertDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +110,10 @@ public class QuonActivity9 extends AppCompatActivity implements NavigationView.O
             toggleMode();
             return true;
         }
+        if (id == R.id.Mic_searchmenu) {
+            showSearchDialog();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -119,6 +134,53 @@ public class QuonActivity9 extends AppCompatActivity implements NavigationView.O
     }
 
 
+    private EditText input;
+    // AlertDialog for search
+    private void showSearchDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
+        // Create a custom layout for the dialog
+        View dialogLayout = getLayoutInflater().inflate(R.layout.search_dialog, null);
+        builder.setView(dialogLayout);
+
+        // Find views in the custom layout
+        input = dialogLayout.findViewById(R.id.Mic_edit_text_search);
+        Button searchButton = dialogLayout.findViewById(R.id.Mic_button_search);
+
+        // Set the click listener for the search button
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String searchText = input.getText().toString().trim();
+                if (!TextUtils.isEmpty(searchText)) {
+                    launchGoogleSearch(searchText);
+                    // Dismiss the dialog after launching search
+                    dialog.dismiss();
+                } else {
+                    Toast.makeText(getApplicationContext(), R.string.please_enter_a_search_phrase, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+
+    // launch Google Search
+    private void launchGoogleSearch(String searchText) {
+    // close keyboard
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(input.getWindowToken(), 0);
+
+        // launch google search
+        Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+        intent.putExtra(SearchManager.QUERY, searchText);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Toast.makeText(getApplicationContext(), (R.string.no_app_can_handle_this_request), Toast.LENGTH_SHORT).show();
+        }
+    }
 
 }
