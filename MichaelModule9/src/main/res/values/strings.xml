@@ -27,4 +27,10 @@
     <string name="delete">Delete</string>
     <string name="course_name">Course Name</string>
     <string name="course_description">COurse Description</string>
+    <string name="please_fill_in_both_fields">Please fill in both fields</string>
+    <string name="deleted_all_courses">Deleted all courses</string>
+    <string name="blank" />
+    <string name="shared_preferences">shared preferences</string>
+    <string name="courses">courses</string>
+    <string name="saved_data_to_sharedpreferences">Saved data to SharedPreferences</string>
 </resources>

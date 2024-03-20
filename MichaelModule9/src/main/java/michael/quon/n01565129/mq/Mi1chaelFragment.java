@@ -63,10 +63,10 @@ public class Mi1chaelFragment extends Fragment {
                     courseModalArrayList.add(new CourseModal(name, desc));
                     adapter.notifyDataSetChanged(); // Notify RecyclerView adapter
                     saveDataToSharedPreferences(); // Save data to SharedPreferences
-                    courseNameEdt.setText(""); // Clear course name field
-                    courseDescEdt.setText(""); // Clear course description field
+                    courseNameEdt.setText(R.string.blank); // Clear course name field
+                    courseDescEdt.setText(R.string.blank); // Clear course description field
                 } else {
-                    Toast.makeText(getContext(), "Please fill in both fields", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), (R.string.please_fill_in_both_fields), Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -79,7 +79,7 @@ public class Mi1chaelFragment extends Fragment {
                 courseModalArrayList.clear();
                 adapter.notifyDataSetChanged(); // Notify RecyclerView adapter
                 clearSharedPreferences(); // Clear data in SharedPreferences
-                Toast.makeText(getContext(), "Deleted all courses", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), (R.string.deleted_all_courses), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -93,9 +93,9 @@ public class Mi1chaelFragment extends Fragment {
     }
 
     private void loadDataFromSharedPreferences() {
-        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("shared preferences", Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences(getString(R.string.shared_preferences), Context.MODE_PRIVATE);
         Gson gson = new Gson();
-        String json = sharedPreferences.getString("courses", null);
+        String json = sharedPreferences.getString(getString(R.string.courses), null);
         Type type = new TypeToken<ArrayList<CourseModal>>() {}.getType();
         courseModalArrayList = gson.fromJson(json, type);
 
@@ -105,20 +105,20 @@ public class Mi1chaelFragment extends Fragment {
     }
 
     private void saveDataToSharedPreferences() {
-        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("shared preferences", Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences(getString(R.string.shared_preferences), Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Gson gson = new Gson();
         String json = gson.toJson(courseModalArrayList);
-        editor.putString("courses", json);
+        editor.putString(getString(R.string.courses), json);
         editor.apply();
 
-        Toast.makeText(getContext(), "Saved data to SharedPreferences", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), (R.string.saved_data_to_sharedpreferences), Toast.LENGTH_SHORT).show();
     }
 
     private void clearSharedPreferences() {
-        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("shared preferences", Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences(getString(R.string.shared_preferences), Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.remove("courses");
+        editor.remove(getString(R.string.courses));
         editor.apply();
     }
 }
