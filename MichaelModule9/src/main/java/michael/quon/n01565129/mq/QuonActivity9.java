@@ -48,7 +48,7 @@ public class QuonActivity9 extends AppCompatActivity implements NavigationView.O
         toggle.syncState();
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Michael1Fragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Mi1chaelFragment()).commit();
             navigationView.setCheckedItem(R.id.Mic_nav_toggle);
         }
 
@@ -65,9 +65,9 @@ public class QuonActivity9 extends AppCompatActivity implements NavigationView.O
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int itemId = item.getItemId();
         if (itemId == R.id.Mic_nav_toggle) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Michael1Fragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Mi1chaelFragment()).commit();
         } else if (itemId == R.id.Mic_nav_search) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Quon2Fragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Qu2onFragment()).commit();
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);

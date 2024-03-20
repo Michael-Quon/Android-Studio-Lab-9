@@ -8,5 +8,6 @@
     <color name="navigation_bar_color_light">#FFFFFF</color>
     <color name="plum_purple">#8C24A7</color>
     <color name="lavender">#8692f7</color>
+    <color name="purple">#673AB7</color>
 
 </resources>
