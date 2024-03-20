@@ -4,8 +4,8 @@ package michael.quon.n01565129.mq;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -48,12 +48,18 @@ public class QuonActivity9 extends AppCompatActivity implements NavigationView.O
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int itemId = item.getItemId();
         if (itemId == R.id.Mic_nav_home) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Michael1Fragment()).commit();
         } else if (itemId == R.id.Mic_nav_settings) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Qu2onFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Quon2Fragment()).commit();
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
@@ -72,4 +78,6 @@ public class QuonActivity9 extends AppCompatActivity implements NavigationView.O
         }
         return super.onKeyUp(keyCode, event);
     }
+
+
 }

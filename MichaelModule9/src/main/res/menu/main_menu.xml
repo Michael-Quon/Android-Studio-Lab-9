@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_options"
+        android:title="@string/options"
+        app:showAsAction="always"
+        app:popupTheme="@style/MyOverflowMenuStyle">
+        <menu>
+            <item
+                android:id="@+id/Mic_togglemenu"
+                android:title="@string/mic"
+                android:icon="@drawable/mic" />
+            <item
+                android:id="@+id/Mic_searchmenu"
+                android:title="@string/quo"
+                android:icon="@drawable/quo" />
+        </menu>
+    </item>
+</menu>
